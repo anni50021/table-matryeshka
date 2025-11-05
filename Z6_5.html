@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица-матрёшка из 7 цветов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .matryoshka-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+            margin: 0 auto;
+        }
+
+        .matryoshka-table td {
+            height: 100px;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .matryoshka-table td:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        /* Цвета радуги */
+        .color-1 { background: linear-gradient(135deg, #FF6B6B, #FF8E8E); } /* Красный */
+        .color-2 { background: linear-gradient(135deg, #FFA726, #FFB74D); } /* Оранжевый */
+        .color-3 { background: linear-gradient(135deg, #FFD54F, #FFE082); } /* Жёлтый */
+        .color-4 { background: linear-gradient(135deg, #66BB6A, #81C784); } /* Зелёный */
+        .color-5 { background: linear-gradient(135deg, #42A5F5, #64B5F6); } /* Голубой */
+        .color-6 { background: linear-gradient(135deg, #5C6BC0, #7986CB); } /* Синий */
+        .color-7 { background: linear-gradient(135deg, #AB47BC, #BA68C8); } /* Фиолетовый */
+
+        @media (max-width: 768px) {
+            .matryoshka-table td {
+                height: 80px;
+                font-size: 0.9em;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Каждая ячейка содержит вложенные таблицы с цветами радуги</h1>
+      
+        <table class="matryoshka-table">
+            <!-- Первый уровень - красная матрёшка -->
+            <tr>
+                <td colspan="7" class="color-1">
+                    Красная матрёшка
+                    <table width="100%" height="80%">
+                        <tr>
+                            <!-- Второй уровень - оранжевые матрёшки -->
+                            <td colspan="6" class="color-2">
+                                Оранжевая матрёшка
+                                <table width="100%" height="70%">
+                                    <tr>
+                                        <!-- Третий уровень - жёлтые матрёшки -->
+                                        <td colspan="5" class="color-3">
+                                            Жёлтая матрёшка
+                                            <table width="100%" height="60%">
+                                                <tr>
+                                                    <!-- Четвёртый уровень - зелёные матрёшки -->
+                                                    <td colspan="4" class="color-4">
+                                                        Зелёная матрёшка
+  
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+</body>
+</html>
+</body>
+</html>
